@@ -1,9 +1,16 @@
 package org.example;
 
 public class Context {
+
+
+    private Strategy strategy=new DefaultStrategy();
     public void effectuerOperation(){
-        System.out.println("****************");
-        System.out.println("------------------");
-        System.out.println("##############");
+        System.out.println("***************");
+        strategy.operationStrategy();
+        System.out.println("----------------");
     }
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
+    }
+
 }
